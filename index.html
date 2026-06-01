@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>清远到潮州｜母女3天2晚毕业旅行攻略</title>
+  <style>
+    :root {
+      --primary: #9f5f3f;
+      --primary-dark: #6f3f29;
+      --accent: #d9a441;
+      --bg: #fff8ef;
+      --card: #ffffff;
+      --text: #2c211b;
+      --muted: #76665b;
+      --line: #ead8c2;
+      --green: #4f7b5f;
+      --red: #b94d3c;
+      --shadow: 0 12px 30px rgba(74, 41, 22, 0.12);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(217, 164, 65, 0.18), transparent 34%),
+        linear-gradient(180deg, #fff8ef 0%, #f9efe1 100%);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+
+    .hero {
+      position: relative;
+      overflow: hidden;
+      border-radius: 28px;
+      padding: 54px 42px;
+      background:
+        linear-gradient(135deg, rgba(111, 63, 41, 0.92), rgba(159, 95, 63, 0.86)),
+        url("https://images.unsplash.com/photo-1564501049412-61c2a3083791?auto=format&fit=crop&w=1600&q=80") center/cover;
+      color: #fff;
+      box-shadow: var(--shadow);
+    }
+
+    .hero::after {
+      content: "潮州";
+      position: absolute;
+      right: 28px;
+      bottom: -36px;
+      font-size: 128px;
+      font-weight: 900;
+      letter-spacing: 8px;
+      opacity: 0.1;
+      white-space: nowrap;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      padding: 7px 14px;
+      border: 1px solid rgba(255,255,255,0.42);
+      border-radius: 999px;
+      font-size: 14px;
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(8px);
+    }
+
+    h1 {
+      margin: 22px 0 12px;
+      max-width: 780px;
+      font-size: clamp(34px, 6vw, 64px);
+      line-height: 1.08;
+      letter-spacing: -1.6px;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: 0;
+      font-size: 18px;
+      color: rgba(255,255,255,0.88);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+      margin-top: 32px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-card {
+      padding: 16px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.14);
+      border: 1px solid rgba(255,255,255,0.22);
+      backdrop-filter: blur(10px);
+    }
+
+    .hero-card strong {
+      display: block;
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+
+    .hero-card span {
+      color: rgba(255,255,255,0.78);
+      font-size: 14px;
+    }
+
+    .section {
+      margin-top: 32px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+
+    .section-title h2 {
+      margin: 0;
+      font-size: 30px;
+      letter-spacing: -0.6px;
+    }
+
+    .section-title p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 22px;
+      box-shadow: 0 8px 22px rgba(74, 41, 22, 0.07);
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 22px;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .tag {
+      padding: 5px 10px;
+      border-radius: 999px;
+      background: #fbefd9;
+      color: var(--primary-dark);
+      font-size: 13px;
+      border: 1px solid #efd8b6;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 18px;
+    }
+
+    .day {
+      display: grid;
+      grid-template-columns: 210px 1fr;
+      gap: 18px;
+      align-items: start;
+    }
+
+    .day-label {
+      position: sticky;
+      top: 18px;
+      background: var(--primary-dark);
+      color: #fff;
+      padding: 22px;
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .day-label small {
+      display: block;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 6px;
+    }
+
+    .day-label strong {
+      display: block;
+      font-size: 24px;
+      line-height: 1.2;
+    }
+
+    .schedule {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 10px;
+      box-shadow: 0 8px 22px rgba(74, 41, 22, 0.07);
+    }
+
+    .item {
+      display: grid;
+      grid-template-columns: 110px 1fr;
+      gap: 16px;
+      padding: 18px;
+      border-bottom: 1px dashed var(--line);
+    }
+
+    .item:last-child {
+      border-bottom: 0;
+    }
+
+    .time {
+      color: var(--primary);
+      font-weight: 800;
+      font-size: 15px;
+    }
+
+    .item h4 {
+      margin: 0 0 6px;
+      font-size: 18px;
+    }
+
+    .item p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .food-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .food {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 18px;
+    }
+
+    .food .emoji {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .food strong {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 4px;
+    }
+
+    .food span {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .tips {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 18px;
+    }
+
+    .notice {
+      border-radius: 24px;
+      padding: 24px;
+      background: #fff;
+      border: 1px solid var(--line);
+      box-shadow: 0 8px 22px rgba(74, 41, 22, 0.07);
+    }
+
+    .notice h3 {
+      margin: 0 0 12px;
+      font-size: 22px;
+    }
+
+    .notice ul {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    .notice li {
+      margin: 7px 0;
+    }
+
+    .route-box {
+      background: linear-gradient(135deg, #fff, #fbefd9);
+    }
+
+    .footer {
+      margin: 34px 0 8px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    @media (max-width: 860px) {
+      .page {
+        padding: 14px;
+      }
+
+      .hero {
+        padding: 38px 24px;
+        border-radius: 22px;
+      }
+
+      .hero-grid,
+      .cards,
+      .food-grid,
+      .tips {
+        grid-template-columns: 1fr;
+      }
+
+      .day {
+        grid-template-columns: 1fr;
+      }
+
+      .day-label {
+        position: relative;
+        top: 0;
+      }
+
+      .item {
+        grid-template-columns: 1fr;
+        gap: 4px;
+      }
+
+      .section-title {
+        align-items: start;
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="hero">
+      <div class="eyebrow">🎓 高考后放松游 · 母女同行 · 清远出发</div>
+      <h1>清远到潮州<br />3天2晚毕业旅行攻略</h1>
+      <p>以潮州古城为核心，把广济桥、牌坊街、开元寺、韩文公祠、潮州工夫茶和潮汕美食串成一条轻松、有文化、有照片、有记忆点的路线。</p>
+      <div class="hero-grid">
+        <div class="hero-card">
+          <strong>6月6日</strong>
+          <span>抵达古城，夜游广济桥</span>
+        </div>
+        <div class="hero-card">
+          <strong>6月7日</strong>
+          <span>古桥古寺，韩愈文脉</span>
+        </div>
+        <div class="hero-card">
+          <strong>6月8日</strong>
+          <span>西湖慢逛，茶馆收尾</span>
+        </div>
+        <div class="hero-card">
+          <strong>6月9日</strong>
+          <span>早餐手信，可选返程</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <h2>行程定位</h2>
+        <p>不赶路，不纯打卡，适合女生和妈妈一起轻松走。</p>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <h3>🍜 美食主线</h3>
+          <p>牛肉火锅、潮州肠粉、粿汁、卤鹅、蚝烙、砂锅粥、鸭母捻、凤凰单丛。</p>
+          <div class="tag-row">
+            <span class="tag">潮汕牛肉</span>
+            <span class="tag">古城小吃</span>
+            <span class="tag">工夫茶</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>🏮 打卡主线</h3>
+          <p>牌坊街、广济楼、广济桥夜景、甲第巷、龙湖古寨，适合拍母女合照和毕业纪念照。</p>
+          <div class="tag-row">
+            <span class="tag">夜景</span>
+            <span class="tag">新中式</span>
+            <span class="tag">古城街巷</span>
+          </div>
+        </div>
+        <div class="card">
+          <h3>📚 文化主线</h3>
+          <p>开元寺看古建，韩文公祠看韩愈文脉，广济桥看潮州古城的历史名片。</p>
+          <div class="tag-row">
+            <span class="tag">韩愈</span>
+            <span class="tag">古桥</span>
+            <span class="tag">潮州古建</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <h2>3天2晚详细路线</h2>
+        <p>建议住牌坊街 / 广济楼 / 西马路附近，晚上回酒店最方便。</p>
+      </div>
+
+      <div class="timeline">
+        <article class="day">
+          <aside class="day-label">
+            <small>DAY 1 · 6月6日</small>
+            <strong>抵达潮州<br />古城初体验</strong>
+          </aside>
+          <div class="schedule">
+            <div class="item">
+              <div class="time">上午-中午</div>
+              <div>
+                <h4>清远坐高铁到潮汕站</h4>
+                <p>抵达后打车到潮州古城酒店，优先住牌坊街、广济楼、西马路附近。先办入住、休息、防晒补水。</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="time">15:30</div>
+              <div>
+                <h4>牌坊街 + 开元路 + 西马路</h4>
+                <p>第一站直接感受潮州古城。边走边吃潮州肠粉、甘草水果、鸭母捻、春卷、炸粿肉。</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="time">18:00</div>
+              <div>
+                <h4>潮汕牛肉火锅</h4>
+                <p>古城附近吃更省体力；想更地道可以打车去官塘。推荐吊龙、匙柄、五花趾、牛肉丸、粿条。</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="time">19:40</div>
+              <div>
+                <h4>广济楼 + 广济桥灯光秀</h4>
+                <p>从广济楼走到滨江长廊，远拍广济桥夜景。看完灯光秀后回牌坊街吃甜汤或杏仁茶。</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="day">
+          <aside class="day-label">
+            <small>DAY 2 · 6月7日</small>
+            <strong>古桥古寺<br />韩愈文脉</strong>
+          </aside>
+          <div class="schedule">
+            <div class="item">
+              <div class="time">08:30</div>
+              <div>
+                <h4>早餐：肠粉 / 粿汁 / 牛肉粿条</h4>
+                <p>不必死磕网红店，住处附近找本地人多的小店即可。早上吃稳一点，后面走路更舒服。</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="time">09:30</div>
+              <div>
+                <h4>广济桥白天登桥</h4>
+                <p>白天看古桥结构和韩江风景。建议穿浅色或新中式衣服，桥面和广济楼都很出片。</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="time">11:00</div>
+              <div>
+                <h4>开元寺</h4>
+                <p>潮州古城重要古寺，适合高考后祈愿，也适合看木构、石雕、屋脊装饰等潮州古建审美。</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="time">12:15</div>
+              <div>
+                <h4>午餐：卤鹅 + 蚝烙 + 鱼饺</h4>
+                <p>推荐卤鹅、潮州鱼饺、蚝烙、炒粿条、反沙芋头，再配一壶工夫茶。</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="time">14:00</div>
+              <div>
+                <h4>甲第巷 / 许驸马府</h4>
+                <p>从游客感转向老城生活感，适合拍安静的古巷照片，也能看到潮汕传统民居和门第文化。</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="time">15:30</div>
+              <div>
+                <h4>韩文公祠</h4>
+                <p>纪念韩愈的重要祠庙。对高考女生来说，这里有读书、成长、文脉、毕业纪念的象征意义。</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="time">18:30</div>
+              <div>
+                <h4>晚餐：潮州菜，夜宵砂锅粥</h4>
+                <p>晚餐吃潮州菜，夜宵可选砂锅粥或白粥杂咸。生腌只建议少量尝试，避免影响后续行程。</p>
+              </div>
+            </div>
+          </div>
+        </article>
+
+        <article class="day">
+          <aside class="day-label">
+            <small>DAY 3 · 6月8日</small>
+            <strong>慢游收尾<br />茶馆放松</strong>
+          </aside>
+          <div class="schedule">
+            <div class="item">
+              <div class="time">08:30</div>
+              <div>
+                <h4>早餐继续扫小吃</h4>
+                <p>推荐无米粿、咸水粿、粿汁、甜汤、甘草水果。第3天尽量吃清淡，方便返程。</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="time">10:00</div>
+              <div>
+                <h4>潮州西湖公园</h4>
+                <p>比古城主街安静，适合母女散步、湖边拍照、调整节奏。</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="time">13:30</div>
+              <div>
+                <h4>下午二选一：龙湖古寨 / 泰佛殿</h4>
+                <p>想要文化深度选龙湖古寨，看古村、祠堂、老巷；想要轻松出片选泰佛殿，异域风格更明显。</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="time">16:00</div>
+              <div>
+                <h4>潮州工夫茶体验</h4>
+                <p>找一家茶馆坐下来，喝凤凰单丛，配茶点。高考后和妈妈慢慢聊天，这一段会比赶景点更有记忆点。</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="time">晚上</div>
+              <div>
+                <h4>返程或住一晚</h4>
+                <p>如果6月8日晚回程，晚餐吃清淡点再去潮汕站；如果6月9日回程，晚上可再吃一顿潮州菜。</p>
+              </div>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <h2>必吃美食清单</h2>
+        <p>按体验优先级整理，第一次来潮州照着吃就够了。</p>
+      </div>
+      <div class="food-grid">
+        <div class="food">
+          <div class="emoji">🥩</div>
+          <strong>牛肉火锅</strong>
+          <span>吊龙、匙柄、五花趾、牛肉丸，安排第1晚最合适。</span>
+        </div>
+        <div class="food">
+          <div class="emoji">🍚</div>
+          <strong>粿汁 / 粿条</strong>
+          <span>早餐首选，清淡稳妥，适合妈妈和女生。</span>
+        </div>
+        <div class="food">
+          <div class="emoji">🦢</div>
+          <strong>潮州卤鹅</strong>
+          <span>潮州经典味型，适合第2天午餐或晚餐。</span>
+        </div>
+        <div class="food">
+          <div class="emoji">🦪</div>
+          <strong>蚝烙</strong>
+          <span>外脆内软，建议热的时候吃，别打包太久。</span>
+        </div>
+        <div class="food">
+          <div class="emoji">🍲</div>
+          <strong>砂锅粥</strong>
+          <span>第2晚夜宵，舒服不刺激。</span>
+        </div>
+        <div class="food">
+          <div class="emoji">🍡</div>
+          <strong>鸭母捻</strong>
+          <span>潮州甜品代表，适合夜游后吃。</span>
+        </div>
+        <div class="food">
+          <div class="emoji">🍊</div>
+          <strong>甘草水果</strong>
+          <span>边逛边吃，解腻，但别一次吃太多。</span>
+        </div>
+        <div class="food">
+          <div class="emoji">🍵</div>
+          <strong>凤凰单丛</strong>
+          <span>建议第3天下午专门安排一次茶馆体验。</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <h2>实用提醒</h2>
+        <p>6月天气热，行程要舒服，不要硬赶。</p>
+      </div>
+      <div class="tips">
+        <div class="notice route-box">
+          <h3>🚄 交通与住宿</h3>
+          <ul>
+            <li>清远坐高铁一般到潮汕站，再打车去潮州古城。</li>
+            <li>住宿优先选牌坊街、广济楼、西马路附近。</li>
+            <li>古城内很多地方适合步行，远一点的韩文公祠、龙湖古寨、泰佛殿建议打车。</li>
+            <li>广济桥灯光秀和景区开放时间可能调整，出发当天再核一次。</li>
+          </ul>
+        </div>
+        <div class="notice">
+          <h3>🎒 母女出行装备</h3>
+          <ul>
+            <li>防晒伞、防晒霜、纸巾、充电宝、舒适鞋。</li>
+            <li>女生拍照可带浅色裙子或新中式衣服。</li>
+            <li>生腌少量尝试即可，返程前一天不建议吃太猛。</li>
+            <li>手信推荐腐乳饼、老药桔、凤凰单丛、绿豆饼。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="notice">
+        <h3>6月9日上午可选安排</h3>
+        <p>如果你们6月9日才返程，不建议再跑远。可以安排：早餐吃粿汁或肠粉 → 牌坊街买手信 → 找茶馆坐一小时 → 退房去潮汕站。这样收尾最舒服。</p>
+      </div>
+    </section>
+
+    <div class="footer">
+      清远出发 · 潮州古城 · 母女毕业旅行 · 美食 + 景点 + 打卡 + 文化
+    </div>
+  </main>
+</body>
+</html>
